@@ -1,0 +1,395 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Chillout.lk</title>
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+
+
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+    <style amp-boilerplate="">body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both
+    }
+
+    @-webkit-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
+
+    @-moz-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
+
+    @-ms-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
+
+    @-o-keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }
+
+    @keyframes -amp-start {
+        from {
+            visibility: hidden
+        }
+        to {
+            visibility: visible
+        }
+    }</style>
+    <noscript>
+        <style amp-boilerplate="">body {
+            -webkit-animation: none;
+            -moz-animation: none;
+            -ms-animation: none;
+            animation: none
+        }</style>
+    </noscript>
+    <style amp-custom>
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            line-height: 1em;
+            margin: 20px 0px 40px 0px;
+
+        }
+
+        h1 span {
+            display: block;
+            font-size: 16px;
+            color: #686868;
+        }
+
+        button.hamburger {
+            background: none;
+            border: none;
+            outline: 0;
+            cursor: pointer;
+            height: 52px;
+            margin: 0px 0px 0px 20px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+        button.hamburger:hover {
+            opacity: 0.5;
+        }
+
+        ul.nav {
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            background: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        ul.nav li a {
+            display: block;
+            font-size: 16px;
+            color: #000;
+            text-decoration: none;
+            padding: 10px 40px;
+        }
+
+        a.shop-now, a.shop-now.black {
+            display: block;
+            border-radius: 200px;
+            background: #242424;
+            border: thin solid #242424;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 10px 40px;
+            -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+            -webkit-transition: 0.1s ease-in;
+            -moz-transition: 0.1s ease-in;
+            -ms-transition: 0.1s ease-in;
+            -o-transition: 0.1s ease-in;
+            transition: 0.1s ease-in;
+
+            height: 52px;
+            width: 280px;
+            margin: 0 auto;
+            text-align:center;
+            text-decoration: none;
+            color:#fff;
+        }
+
+        a.shop-now span{
+            font-size:18px;
+            display:inline-block;
+            margin-left:20px;
+        }
+
+        a.shop-now:hover {
+            background: #242424;
+            color: #fff;
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        a.shop-now.black{
+            background: #fff;
+            color: #242424;
+            border:thin solid #fff;
+        }
+        a.shop-now.black:hover{
+            background: #fff;
+            color: #242424;
+
+        }
+        
+        a.shop-now:active{
+            -webkit-transform: scale(0.95);
+            -moz-transform: scale(0.95);
+            -ms-transform: scale(0.95);
+            -o-transform: scale(0.95);
+            transform: scale(0.95);
+        }
+
+        .product-white {
+            position: absolute;
+            height: 100vh;
+            z-index: 2;
+            width: 100%;
+            background: #fff;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .product-black {
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            z-index: 1;
+            background: #242424;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .product-white figure,
+        .product-black figure {
+            width: 30vw;
+            margin: 0 auto;
+        }
+
+        .product-white-wrapper {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        .product-white h1,
+        .product-black h1 {
+            font-size: 64px;
+        }
+
+        .product-black h1 {
+            color: #fff;
+        }
+
+        .product-white {
+            clip: rect(0 auto auto 0);
+            -webkit-clip-path: url(#svgClipPath);
+            clip-path: url(#svgClipPath);
+            height: calc(100vh / 1);
+        }
+
+        .product-black .product-black-wrapper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .page-wrapper {
+            height: calc(2 * 100vh);
+        }
+
+    </style>
+</head>
+
+<body>
+<amp-sidebar id="sidebar1" layout="nodisplay" side="left">
+    <ul class="nav">
+        <li>
+            <a href="#">
+                PRODUCTS
+            </a>
+        </li>
+
+        <li>
+
+            <a href="#">
+                ABOUT
+            </a>
+
+        </li>
+
+        <li>
+            <a href="#">
+                REVIEWS
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                SHOW ROOM
+            </a>
+        </li>
+    </ul>
+</amp-sidebar>
+<article>
+
+
+    <div class="hide" style="display:none;">
+        <svg width="0" height="0">
+            <defs>
+                <clipPath id="svgClipPath" clipPathUnits="objectBoundingBox">
+                    <rect y="0" x="0" width="1" height="0.99"></rect>
+                </clipPath>
+            </defs>
+        </svg>
+    </div>
+
+
+    <div class="page-wrapper">
+        <div class="product-white">
+
+
+            <div class="product-white-wrapper">
+                <button class="hamburger" on='tap:sidebar1.toggle'>
+
+                    <svg width="24px" height="17px" viewBox="0 0 24 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="MercLife-Copy" transform="translate(-73.000000, -68.000000)" fill="#000000"
+                               fill-rule="nonzero">
+                                <g id="462998" transform="translate(73.000000, 68.000000)">
+                                    <path d="M23.0305312,7.34693878 L0.96946875,7.34693878 C0.4340625,7.34693878 0,7.78548634 0,8.32653061 C0,8.86757488 0.4340625,9.30612245 0.96946875,9.30612245 L23.0305313,9.30612245 C23.5659844,9.30612245 24,8.86757488 24,8.32653061 C24,7.78553371 23.5659844,7.34693878 23.0305312,7.34693878 Z"
+                                          id="Shape"></path>
+                                    <path d="M23.0305312,0 L0.96946875,0 C0.4340625,0 0,0.438594933 0,0.979591837 C0,1.52058874 0.4340625,1.95918367 0.96946875,1.95918367 L23.0305313,1.95918367 C23.5659844,1.95918367 24,1.52058874 24,0.979591837 C24,0.438594933 23.5659844,0 23.0305312,0 Z"
+                                          id="Shape"></path>
+                                    <path d="M23.0305312,14.6938776 L0.96946875,14.6938776 C0.4340625,14.6938776 0,15.1324251 0,15.6734694 C0,16.2145137 0.4340625,16.6530612 0.96946875,16.6530612 L23.0305313,16.6530612 C23.5659844,16.6530612 24,16.2145137 24,15.6734694 C24,15.1324251 23.5659844,14.6938776 23.0305312,14.6938776 Z"
+                                          id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+
+                <h1>
+                   LOUNGE - WHITE
+                </h1>
+                <figure class="">
+                    <amp-img src="images/landing-hero-blanc@2x.png" width="1" height="1.37"
+                             layout="responsive"></amp-img>
+                </figure>
+
+                <a href="#" class="shop-now">
+                    ADD TO CART <span>9000 LKR</span>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="product-black">
+            <div class="product-black-wrapper">
+                <button class="hamburger" on='tap:sidebar1.toggle'>
+                    <svg width="24px" height="17px" viewBox="0 0 24 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="MercLife-Copy" transform="translate(-73.000000, -68.000000)" fill="#FFFFFF"
+                               fill-rule="nonzero">
+                                <g id="462998" transform="translate(73.000000, 68.000000)">
+                                    <path d="M23.0305312,7.34693878 L0.96946875,7.34693878 C0.4340625,7.34693878 0,7.78548634 0,8.32653061 C0,8.86757488 0.4340625,9.30612245 0.96946875,9.30612245 L23.0305313,9.30612245 C23.5659844,9.30612245 24,8.86757488 24,8.32653061 C24,7.78553371 23.5659844,7.34693878 23.0305312,7.34693878 Z"
+                                          id="Shape"></path>
+                                    <path d="M23.0305312,0 L0.96946875,0 C0.4340625,0 0,0.438594933 0,0.979591837 C0,1.52058874 0.4340625,1.95918367 0.96946875,1.95918367 L23.0305313,1.95918367 C23.5659844,1.95918367 24,1.52058874 24,0.979591837 C24,0.438594933 23.5659844,0 23.0305312,0 Z"
+                                          id="Shape"></path>
+                                    <path d="M23.0305312,14.6938776 L0.96946875,14.6938776 C0.4340625,14.6938776 0,15.1324251 0,15.6734694 C0,16.2145137 0.4340625,16.6530612 0.96946875,16.6530612 L23.0305313,16.6530612 C23.5659844,16.6530612 24,16.2145137 24,15.6734694 C24,15.1324251 23.5659844,14.6938776 23.0305312,14.6938776 Z"
+                                          id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+                <h1>
+                    LOUNGE - BLACK
+                </h1>
+
+                <figure class="">
+                    <amp-img src="images/landing-hero-noir@2x.png" width="1" height="1.37"
+                             layout="responsive"></amp-img>
+                </figure>
+
+                <a href="#" class="shop-now black">
+                    ADD TO CART <span>12000 LKR</span>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+
+</article>
+</body>
+</html>
